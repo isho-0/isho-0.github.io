@@ -12,17 +12,17 @@ sitemap: false
 */
 
 // Partials
-@import "variables";
-@import "mixins";
-@import "normalize";
-@import "site";
-@import "typography";
-@import "elements";
-@import "syntax";
-@import "nav";
-@import "vendor/fonts";
-@import "vendor/font-awesome";
-@import "vendor/animate";
-@import "vendor/magnific-popup/magnific-popup";
-@import "print";
+@use "variables";
+@use "mixins";
+@use "normalize";
+@use "site";
+@use "typography";
+@use "elements";
+@use "syntax";
+@use "nav";
+@use "vendor/fonts";
+@use "vendor/font-awesome";
+@use "vendor/animate";
+@use "vendor/magnific-popup/magnific-popup";
+@use "print";
 

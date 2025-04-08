@@ -1,3 +1,5 @@
+@use "variables";
+@use "mixins";
 .dl-menuwrapper {
 	width: 100%;
 	position: absolute;
@@ -10,7 +12,7 @@
 	-webkit-perspective-origin: 50% 200%;
 	-moz-perspective-origin: 50% 200%;
 	perspective-origin: 50% 200%;
-	@media #{$notsmall} {
+	@media #{variables.$notsmall} {
 		position: fixed;
 		max-width: 175px;
 		top: 25px;
@@ -21,7 +23,7 @@
 		align-items: center;
 		top: 5px;
 		left: 5px;
-		background: $comp-color;
+		background: variables.$comp-color;
 		border: none;
 		width: 48px;
 		height: 45px;
@@ -31,10 +33,10 @@
 		position: relative;
 		cursor: pointer;
 		outline: none;
-		@include border-radius(0,3px,0,0);
+		@include mixins.border-radius(0,3px,0,0);
 		opacity: 1;
-		@media #{$notsmall} {
-			@include border-radius(7px,7px,7px,7px);
+		@media #{variables.$notsmall} {
+			@include mixins.border-radius(7px,7px,7px,7px);
 			background-color: transparent;
 		}
 	}
@@ -48,12 +50,12 @@
 		position: absolute;
 		width: 68%;
 		height: 5px;
-		background: $white;
+		background: variables.$white;
 		top: 10px;
 		left: 16%;
 		box-shadow: 
-			0 10px 0 $white, 
-			0 20px 0 $white;
+			0 10px 0 variables.$white, 
+			0 20px 0 variables.$white;
 	}
 	button.dl-active {
 		display: none;
@@ -70,18 +72,18 @@
 		h4 {
 			margin:0;
 			padding: 15px 20px 0;
-			color: rgba($white,0.9);
+			color: rgba(variables.$white,0.9);
 		}
 		p {
 			margin: 0;
 			padding: 15px 20px;
-			@include font-rem(14);
-			color: rgba($white,0.8);
+			@include mixins.font-rem(14);
+			color: rgba(variables.$white,0.8);
 			font-weight: 300;
 			a {
 				display: inline;
 				padding: 0;
-				@include font-rem(14);
+				@include mixins.font-rem(14);
 			}
 		}
 		a {
@@ -90,10 +92,10 @@
 			padding: 10px 20px;
 			border: 0.1mm solid rgb(16, 0, 27);
 			opacity: 1;
-			@include font-rem(14);
+			@include mixins.font-rem(14);
 			line-height: 20px;
 			font-weight: 400;
-			color: $white;
+			color: variables.$white;
 			outline: none;
 			text-decoration: none;
 		}
@@ -107,7 +109,7 @@
 			top: 0;
 			line-height: 40px;
 			font-family: 'fontawesome';
-			color: $white;
+			color: variables.$white;
 			-webkit-font-smoothing: antialiased;
 			content: "\f105";
 		}
@@ -133,15 +135,15 @@
 		max-height: 600px;
 		opacity: 0;
 		pointer-events: none;
-		box-shadow: 0 12px 24px rgba($black,0.4);
+		box-shadow: 0 12px 24px rgba(variables.$black,0.4);
 		-webkit-transform: translateY(10px);
 		-moz-transform: translateY(10px);
 		transform: translateY(10px);
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility: hidden;
 		backface-visibility: hidden;
-		@media #{$notsmall} {
-			@include border-radius(7px,7px,7px,7px);
+		@media #{variables.$notsmall} {
+			@include mixins.border-radius(7px,7px,7px,7px);
 			max-height: 650px;
 			width: 100%;
 		}
@@ -157,13 +159,13 @@
 		-webkit-transform: translateY(0px);
 		-moz-transform: translateY(0px);
 		transform: translateY(0px);
-		@media #{$notsmall} {
+		@media #{variables.$notsmall} {
 			opacity: 0.91;
 		}
 	}
 	.dl-submenu {
-		@include rounded(3px);
-		box-shadow: 0 12px 24px rgba($black,0.4);
+		@include mixins.rounded(3px);
+		box-shadow: 0 12px 24px rgba(variables.$black,0.4);
 		.btn {
 			margin-bottom: 0;
 			display: flex;
@@ -336,7 +338,7 @@ All this is done for any sub-level being entered.
 	}
 	.dl-menuwrapper {
 		position: initial;
-		@media #{$notsmall} {
+		@media #{variables.$notsmall} {
 			position: absolute;
 		}
 	}
@@ -371,7 +373,7 @@ All this is done for any sub-level being entered.
 .dl-menuwrapper button:hover,
 .dl-menuwrapper button.dl-active,
 .dl-menuwrapper ul {
-	background: $comp-color;
+	background: variables.$comp-color;
 }
 // Fix for IE
 .dl-menu li {

@@ -1,7 +1,8 @@
+@use "variables";
 @media print {
   body {
     background-image: none !important;
-    background-color: $white;
+    background-color: variables.$white;
   }
   .wrapper {
     box-shadow: none;
@@ -16,7 +17,7 @@
       padding: 0;
   }
   .social-btn, .btn {
-    border-color: $color_mischka;
+    border-color: variables.$color_mischka;
   }
   .post-title .btn,
   .reading-time,
