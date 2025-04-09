@@ -92,3 +92,13 @@ exclude:
     LICENSE,
     Rakefile,
   ]
+
+compress_html:
+  clippings: all
+  comments: ["<!--", "-->"]
+  endings: all
+  startings: ["html", "head", "body"]
+  blanklines: false
+  profile: false
+  ignore:
+    envs: [development]
