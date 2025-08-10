@@ -5,6 +5,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/isho-0.github.io/',
   plugins: [
     vue({
       template: { transformAssetUrls }
